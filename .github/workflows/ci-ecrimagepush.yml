@@ -31,6 +31,7 @@ jobs:
       - name: Debug Print
         run: |
          echo "FULL_IMAGE = $FULL_IMAGE"
+         echo "${IMAGE_TAG}"
   
 
       - name: Build Docker image
