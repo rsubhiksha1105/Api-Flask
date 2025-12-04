@@ -47,11 +47,11 @@ jobs:
 
       - name: Replace image in Deployment YAML
         run: |
-          sed -i "s|REPLACE_IMAGE|$FULL_IMAGE|g" k8s/deployment.yaml
+          sed -i "s|REPLACE_IMAGE|$FULL_IMAGE|g" k8s/deployment.yml
           
 
       - name: Apply manifests
         run: |
-          kubectl apply -f k8s/deployment.yaml
-          kubectl apply -f k8s/service.yaml || true
+          kubectl apply -f k8s/deployment.yml
+          kubectl apply -f k8s/service.yml || true
           
